@@ -1,0 +1,48 @@
+<launch>
+    
+
+    <!-- Connect Mode -->
+    <param name="connect_mode" value='ap' />
+    <!-- ap , sta , rndis -->
+    
+    <!-- Camera -->
+    <param name="is_camera" type="bool" value="True" />
+    <param name="camera_image_topic" type="str" value="ep_cam/image_raw" />
+    <param name="camera_info_topic" type="str" value="ep_cam/camera_info" />
+    <param name="resolution" type="str" value="STREAM_360P" />  <!-- STREAM_360P STREAM_720P -->
+    
+    <!-- IMU -->
+    <param name="imu_topic" type="str" value="imu_data" />
+    <param name="imu_frame_id" type="str" value="imu_link" />
+    <param name="imu_freq" type="int" value="50" /> <!-- 1, 5, 10, 20, 50 -->
+    
+    <!-- Odom -->
+    <param name="odom_topic" type="str" value="odom" />
+    <param name="odom_frame_id" type="str" value="base_link" />
+    
+    <!-- Arm & Grip & Gimbal-->
+    <param name="is_arm" type="bool" value="True" />
+    <param name="is_gripper" type="bool" value="True" />
+    <param name="is_gimbal" type="bool" value="False" />
+    <param name="gimbal_freq" type="int" value="50" /> <!-- 1, 5, 10, 20, 50 -->
+    
+    <!-- CMD_Topic -->
+    <param name="cmd_topic" type="str" value="cmd_vel" />
+    
+    <!-- LED Setting -->
+    <param name="led_r" type="int" value="255" />   <!-- 0-255 -->
+    <param name="led_g" type="int" value="0" />
+    <param name="led_b" type="int" value="0" />
+    
+    <!-- Chassis Size -->
+    <param name="chassis_shape_a" value="0.1" />
+    <param name="chassis_shape_b" value="0.1" />
+    <param name="chassis_wheel_r" value="0.05" />
+    <param name="chassis_freq" type="int" value="50" /> <!-- 1, 5, 10, 20, 50 -->
+    
+        <!-- Run the rmep_base nodes -->
+    <node pkg = "rmep_base" type="rmep_base.py" name="rmep_base" output="screen" />
+    
+    
+      
+</launch>
