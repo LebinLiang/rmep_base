@@ -1,0 +1,4 @@
+uint8 state
+float32 value
+---
+uint8 result

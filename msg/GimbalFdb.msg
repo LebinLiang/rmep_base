@@ -1,0 +1,7 @@
+time stamp
+float32 pitch_angle_fdb
+float32 yaw_angle_fdb
+float32 pitch_ground_angle_fdb
+float32 yaw_ground_angle_fdb
+
+

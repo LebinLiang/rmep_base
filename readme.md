@@ -5,23 +5,41 @@
 ```
 ├── CMakeLists.txt
 ├── config
-│   ├── head_camera.yaml 
-├── include
-│   └── rmep_base
+│   └── head_camera.yaml
 ├── launch
 │   └── rmep_base.launch
+├── LICENSE
+├── msg
+│   ├── GimbalCmd_ab.msg
+│   ├── GimbalCmd.msg
+│   └── GimbalFdb.msg
 ├── package.xml
 ├── readme.md
 ├── scripts
 │   ├── rmep_base.py
 │   └── test
 │       └── rm_cam_test.py
-└── src
-
+└── srv
+    ├── RobotArm.srv
+    ├── RobotBlaster.srv
+    ├── RobotGrip.srv
+    └── RobotPwm.srv
 
 ```
 ## RMEP-SDK说明
 https://robomaster-dev.readthedocs.io/zh_CN/latest/introduction.html
+
+## 依赖
+
+1. python3
+
+## 安装robomaster python库
+
+`pip install robomaster`
+
+如果网络较差，多次都安装失败，可以尝试:
+
+`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple robomaster`
 
 ## 使用说明
 1. 【注意】需要导入python robomaster库 pyhton3.6以上版本
@@ -35,8 +53,8 @@ https://robomaster-dev.readthedocs.io/zh_CN/latest/introduction.html
 
 ## 发布话题（默认话题名字）
 1. 图像数据（可选）
- /ep_cam/image_raw
- /ep_cam/camera_info
+ /ep_cam/image_raw    图像话题
+ /ep_cam/camera_info  相机参数文件
 2. IMU数据
  /imu
 3. 里程计数据
