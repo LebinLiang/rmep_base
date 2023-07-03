@@ -41,7 +41,7 @@
     <param name="chassis_freq" type="int" value="50" /> <!-- 1, 5, 10, 20, 50 -->
     
         <!-- Run the rmep_base nodes -->
-    <node pkg = "rmep_base" type="rmep_base.py" name="rmep_base" output="screen" />
+    <node pkg = "rmep_base" type="rmep_bringup.py" name="rmep_base" output="screen" />
     
     
       

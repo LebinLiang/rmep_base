@@ -26,6 +26,7 @@ import rospkg
 import tf
 import copy
 
+
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge , CvBridgeError
@@ -33,8 +34,8 @@ from sensor_msgs.msg import CameraInfo
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
-from rmep_msgs.srv import *
-from rmep_msgs.msg import GimbalFdb,GimbalCmd
+from rmep_base.msg import GimbalFdb , GimbalCmd
+from rmep_base.srv import *
 
 class EP_ROS:
     def __init__(self):
@@ -101,7 +102,7 @@ class EP_ROS:
         #控制话题订阅
         self.cmd_vel_sub = rospy.Subscriber(self.cmd_topic, Twist, self.cmd_vel_cb, queue_size=1) 
         #服务发布
-        self.pwm_srv = rospy.Service('ep_pwm',RobotPwm ,self.pwm_srv_cb) 
+        self.pwm_srv = rospy.Service('ep_pwm', RobotPwm ,self.pwm_srv_cb) 
  
         self.br = tf.TransformBroadcaster() 
         self.bridge = CvBridge()

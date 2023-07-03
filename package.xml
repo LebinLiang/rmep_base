@@ -35,9 +35,9 @@
   <!--   <depend>roscpp</depend> -->
   <!--   Note that this is equivalent to the following: -->
   <!--   <build_depend>roscpp</build_depend> -->
-  <!--   <exec_depend>roscpp</exec_depend> -->
+  <!--   <exec_depend>roscpp</exec_depend> -->7
   <!-- Use build_depend for packages you need at compile time: -->
-  <!--   <build_depend>message_generation</build_depend> -->
+    <build_depend>message_generation</build_depend> 
   <!-- Use build_export_depend for packages you need in order to build against this package: -->
   <!--   <build_export_depend>message_generation</build_export_depend> -->
   <!-- Use buildtool_depend for build tool packages: -->
